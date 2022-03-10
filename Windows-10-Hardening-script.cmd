@@ -516,11 +516,11 @@ netsh advfirewall firewall add rule name="Block cmstp.exe netconns" program="%sy
 netsh advfirewall firewall add rule name="Block cmstp.exe netconns" program="%systemroot%\SysWOW64\cmstp.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block cscript.exe netconns" program="%systemroot%\system32\cscript.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block cscript.exe netconns" program="%systemroot%\SysWOW64\cscript.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block desktopimgdownldr.exe" -Program "%systemroot%\system32\desktopimgdownldr.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block desktopimgdownldr.exe" program "%systemroot%\system32\desktopimgdownldr.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block dfsvc.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\dfsvc.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block diantz.exe" -Program "%systemroot%\system32\diantz.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block diantz.exe" -Program "%systemroot%\SysWOW64\diantz.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block esentutl.exe netconns" program="%systemroot%\system32\esentutl.exe" protocol=tcp dir=out enable=yes action=block profile=any
@@ -533,21 +533,21 @@ netsh advfirewall firewall add rule name="Block findstr.exe netconns" program="%
 netsh advfirewall firewall add rule name="Block findstr.exe netconns" program="%systemroot%\SysWOW64\findstr.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block hh.exe netconns" program="%systemroot%\system32\hh.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block hh.exe netconns" program="%systemroot%\SysWOW64\hh.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block ieexec.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\ieexec.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block ieexec.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\ieexec.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block imewdbld.exe" -Program "%systemroot%\System32\IME\SHARED\IMEWDBLD.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block ieexec.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\ieexec.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block ieexec.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\ieexec.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block imewdbld.exe" program "%systemroot%\System32\IME\SHARED\IMEWDBLD.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block InstallUtil.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block makecab.exe netconns" program="%systemroot%\system32\makecab.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block makecab.exe netconns" program="%systemroot%\SysWOW64\makecab.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v3.5\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v3.5\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
-netsh advfirewall firewall add rule name="Block msbuild.exe netconns" -Program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v2.0.50727\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v3.5\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework64\v4.0.30319\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v2.0.50727\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v3.5\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
+netsh advfirewall firewall add rule name="Block msbuild.exe netconns" program "%systemroot%\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block mshta.exe netconns" program="%systemroot%\system32\mshta.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block mshta.exe netconns" program="%systemroot%\SysWOW64\mshta.exe" protocol=tcp dir=out enable=yes action=block profile=any
 netsh advfirewall firewall add rule name="Block msiexec.exe netconns" program="%systemroot%\system32\msiexec.exe" protocol=tcp dir=out enable=yes action=block profile=any
