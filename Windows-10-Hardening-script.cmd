@@ -180,21 +180,26 @@ powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 92E97FA1-2EDF-4
 :: Block credential stealing from the Windows local security authority subsystem (lsass.exe)
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2 -AttackSurfaceReductionRules_Actions Enabled
 ::
+:: https://argonsys.com/microsoft-cloud/library/mem-all-things-about-usb-drive-management-and-troubleshooting/
 :: Block untrusted and unsigned processes that run from USB
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4 -AttackSurfaceReductionRules_Actions Enabled
 ::
 :: Block Adobe Reader from creating child processes
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C -AttackSurfaceReductionRules_Actions Enabled
 ::
+:: https://medium.com/threatpunter/detecting-removing-wmi-persistence-60ccbb7dff96
 :: Block process creations originating from PSExec and WMI commands
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids D1E49AAC-8F56-4280-B9BA-993A6D77406C -AttackSurfaceReductionRules_Actions Enabled
 ::
+:: https://blog.palantir.com/microsoft-defender-attack-surface-reduction-recommendations-a5c7d41c3cf8
 :: Block Office communication application from creating child processes
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 26190899-1602-49E8-8B27-EB1D0A1CE869 -AttackSurfaceReductionRules_Actions Enabled
 ::
+:: https://www.bleepingcomputer.com/news/microsoft/new-windows-security-feature-blocks-vulnerable-drivers/
 :: Block abuse of exploited vulnerable signed drivers
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 56A863A9-875E-4185-98A7-B882C64B5CE5 -AttackSurfaceReductionRules_Actions Enabled
 ::
+:: https://www.verboon.info/2020/10/deploying-defender-asr-block-persistence-through-wmi-event-subscription/
 :: Block persistence through WMI event subscription
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids E6DB77E5-3DF2-4CF1-B95A-636979351E5B -AttackSurfaceReductionRules_Actions Enabled
 ::
