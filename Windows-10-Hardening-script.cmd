@@ -195,7 +195,7 @@ powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids 56A863A9-875E-4
 :: Block persistence through WMI event subscription
 powershell.exe Add-MpPreference -AttackSurfaceReductionRules_Ids E6DB77E5-3DF2-4CF1-B95A-636979351E5B -AttackSurfaceReductionRules_Actions Enabled
 ::
-:: If you want to check the rules enabled.
+:: If you want to check the ASR rules enabled
 :: Download and run this https://github.com/directorcia/Office365/blob/master/win10-asr-get.ps1
 ::
 :: EDIT: Enable Controlled Folder Access - enable with caution. Application installations may be blocked - admin elevation 
