@@ -6,16 +6,17 @@
 ::    License: Free to use for personal use. For commercial use, contact Atlant security at https://atlantsecurity.com/
 ::
 ::###############################################################################################################
-:: Credits and More info: https://gist.github.com/mackwage/08604751462126599d7e52f233490efe
-::                        https://github.com/LOLBAS-Project/LOLBAS
-::                        https://lolbas-project.github.io/
-::                        https://github.com/Disassembler0/Win10-Initial-Setup-Script
-::                        https://github.com/cryps1s/DARKSURGEON/tree/master/configuration/configuration-scripts
-::                        https://gist.github.com/alirobe/7f3b34ad89a159e6daa1#file-reclaimwindows10-ps1-L71
-::                        https://github.com/teusink/Home-Security-by-W10-Hardening
-::                        https://gist.github.com/ricardojba/ecdfe30dadbdab6c514a530bc5d51ef6
-::                        https://gist.github.com/rc-MikeDevens/f991325ad51b398f8cf68eb63416977f
-::                        https://www.genict.com/wp-content/uploads/2018/06/Firewall-Rules.ps1_.txt
+:: Credits and More info: 
+::    https://gist.github.com/mackwage/08604751462126599d7e52f233490efe
+::    https://github.com/LOLBAS-Project/LOLBAS
+::    https://lolbas-project.github.io/
+::    https://github.com/Disassembler0/Win10-Initial-Setup-Script
+::    https://github.com/cryps1s/DARKSURGEON/tree/master/configuration/configuration-scripts
+::    https://gist.github.com/alirobe/7f3b34ad89a159e6daa1#file-reclaimwindows10-ps1-L71
+::    https://github.com/teusink/Home-Security-by-W10-Hardening
+::    https://gist.github.com/ricardojba/ecdfe30dadbdab6c514a530bc5d51ef6
+::    https://gist.github.com/rc-MikeDevens/f991325ad51b398f8cf68eb63416977f
+::    https://www.genict.com/wp-content/uploads/2018/06/Firewall-Rules.ps1_.txt
 ::
 ::###############################################################################################################
 ::###############################################################################################################
