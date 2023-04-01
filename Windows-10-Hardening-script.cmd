@@ -1,5 +1,7 @@
 ::###############################################################################################################
-::    Fork: @zer0lightning
+::    Script forked by: https://github.com/zer0lightning | Twitter: @_zer0lightning
+::    Original authors, credits below. I have also added my own changes in this script.
+::    -----------------------------------------------------------------------------------------------------------
 ::    Atlant Security (https://atlantsecurity.com)'s Windows 10 Security Hardening Script - 
 ::    includes Microsoft 365, Office, Chrome, Adobe Reader, Edge security settings. 
 ::    Read the comments and uncomment or comment relevant sections to make best use of it. 
@@ -7,6 +9,7 @@
 ::
 ::###############################################################################################################
 :: Credits and More info: 
+::    https://github.com/atlantsecurity/windows-hardening-scripts
 ::    https://gist.github.com/mackwage/08604751462126599d7e52f233490efe
 ::    https://github.com/LOLBAS-Project/LOLBAS
 ::    https://lolbas-project.github.io/
