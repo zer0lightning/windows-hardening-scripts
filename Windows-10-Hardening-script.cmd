@@ -86,9 +86,11 @@ assoc .slk=txtfile
 assoc .iqy=txtfile
 assoc .prn=txtfile
 assoc .diff=txtfile
-:: Disable ISO Mounting / Mitigation for ISOMorph and HTML Smuggling
+:: Disable ISO and VHD Mounting / Mitigation for ISOMorph and HTML Smuggling
 :: https://support.huntress.io/hc/en-us/articles/11477430445587
+:: https://www.huntress.com/blog/addressing-initial-access
 reg add "HKEY_CLASSES_ROOT\Windows.IsoFile\shell\mount" /v ProgrammaticAccessOnly /t REG_SZ /d "" /f
+reg add "HKEY_CLASSES_ROOT\Windows.VhdFile\shell\mount" /v ProgrammaticAccessOnly /t REG_SZ /d "" /f
 :: https://posts.specterops.io/remote-code-execution-via-path-traversal-in-the-device-metadata-authoring-wizard-a0d5839fc54f
 reg delete "HKLM\SOFTWARE\Classes\.devicemetadata-ms" /f
 reg delete "HKLM\SOFTWARE\Classes\.devicemanifest-ms" /f
@@ -325,6 +327,31 @@ reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v PackagerPrompt /t
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v VBAWarnings /t REG_DWORD /d 4 /f
 reg add "HKCU\SOFTWARE\Microsoft\Office\16.0\Word\Security" /v AllowDDE /t REG_DWORD /d 0 /f
 reg add "HKCU\SOFTWARE\Microsoft\Office\Common\Security" /v DisableAllActiveX /t REG_DWORD /d 1 /f
+::
+::
+:: Block OneNote malware
+:: https://www.huntress.com/blog/addressing-initial-access
+:: Uncomment if you want to disable file embedding for all files in OneNote
+:: WARNING. This prevents embedding, but prevents interacting with embedded files.
+:: reg add "HKCU\Software\Policies\Microsoft\Office\12.0\Onenote\options" /v disableembeddedfiles /t REG_DWORD /d 1 /f
+:: reg add "HKCU\Software\Policies\Microsoft\Office\14.0\Onenote\options" /v disableembeddedfiles /t REG_DWORD /d 1 /f
+:: reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Onenote\options" /v disableembeddedfiles /t REG_DWORD /d 1 /f
+:: reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Onenote\options" /v disableembeddedfiles /t REG_DWORD /d 1 /f
+:: Disables embedding for certain risky file extensions commonly used for malware spam campaigns.
+reg add "HKCU\Software\Policies\Microsoft\Office\12.0\Onenote\options\embeddedfileopenoptions" /v blockedextensions /t REG_SZ /d ".js;.exe;.bat;.vbs;.com;.scr;.cmd;.ps;.jar;.ps1;.psm1" /f
+reg add "HKCU\Software\Policies\Microsoft\Office\14.0\Onenote\options\embeddedfileopenoptions" /v blockedextensions /t REG_SZ /d ".js;.exe;.bat;.vbs;.com;.scr;.cmd;.ps;.jar;.ps1;.psm1" /f
+reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Onenote\options\embeddedfileopenoptions" /v blockedextensions /t REG_SZ /d ".js;.exe;.bat;.vbs;.com;.scr;.cmd;.ps;.jar;.ps1;.psm1" /f
+reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Onenote\options\embeddedfileopenoptions" /v blockedextensions /t REG_SZ /d ".js;.exe;.bat;.vbs;.com;.scr;.cmd;.ps;.jar;.ps1;.psm1" /f
+::
+::
+:: Block Macro Execution from Internet
+:: https://www.bleepingcomputer.com/news/microsoft/how-to-auto-block-macros-in-microsoft-office-docs-from-the-internet/
+reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Word\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Excel\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\15.0\PowerPoint\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Outlook\Security" /v markinternalasunsafe /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Word\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Excel\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
 ::
 ::
 ::###############################################################################################################
