@@ -344,6 +344,30 @@ reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Onenote\options\embeddedfi
 reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Onenote\options\embeddedfileopenoptions" /v blockedextensions /t REG_SZ /d ".js;.exe;.bat;.vbs;.com;.scr;.cmd;.ps;.jar;.ps1;.psm1" /f
 ::
 ::
+:: Enable AMSI for all documents by setting the following registry key - Office 2016 or Office 365 installed
+:: https://getadmx.com/?Category=Office2016&Policy=office16.Office.Microsoft.Policies.Windows::L_MacroRuntimeScanScope
+:: https://malwaretips.com/threads/office-365-and-amsi-support-for-vba-macros.87281/
+reg add "HKCU\Software\Microsoft\Office\16.0\Common\Security" /v MacroRuntimeScanScope /t REG_DWORD /d 2 /f
+reg add "HKCU\Software\Policies\Microsoft\Office\16.0\Common\Security" /v MacroRuntimeScanScope /t REG_DWORD /d 2 /f
+:: ---------------------
+:: Source: https://gist.github.com/wdormann/732bb88d9b5dd5a66c9f1e1498f31a1b
+:: ---------------------
+reg add "HKCU\Software\Microsoft\Office\14.0\Word\Options\WordMail" /v DontUpdateLinks /t REG_DWORD /d 00000001 /f
+reg add "HKCU\Software\Microsoft\Office\15.0\Word\Options\WordMail" /v DontUpdateLinks /t REG_DWORD /d 00000001 /f
+reg add "HKCU\Software\Microsoft\Office\16.0\Word\Options\WordMail" /v DontUpdateLinks /t REG_DWORD /d 00000001 /f
+::
+:: ---------------------
+:: File Block policy to prevent Office from opening RTF documents
+:: CVE-2023-21716 and CVE-2022-30190
+:: ---------------------
+reg add "HKCU\Software\Microsoft\Office\14.0\Word\Security\FileBlock" /v RtfFiles /t REG_DWORD /d 00000002 /f
+reg add "HKCU\Software\Microsoft\Office\15.0\Word\Security\FileBlock" /v RtfFiles /t REG_DWORD /d 00000002 /f
+reg add "HKCU\Software\Microsoft\Office\16.0\Word\Security\FileBlock" /v RtfFiles /t REG_DWORD /d 00000002 /f
+reg add "HKCU\Software\Microsoft\Office\14.0\Word\Security\FileBlock" /v OpenInProtectedView /t REG_DWORD /d 00000000 /f
+reg add "HKCU\Software\Microsoft\Office\15.0\Word\Security\FileBlock" /v OpenInProtectedView /t REG_DWORD /d 00000000 /f
+reg add "HKCU\Software\Microsoft\Office\16.0\Word\Security\FileBlock" /v OpenInProtectedView /t REG_DWORD /d 00000000 /f
+::
+::
 :: Block Macro Execution from Internet
 :: https://www.bleepingcomputer.com/news/microsoft/how-to-auto-block-macros-in-microsoft-office-docs-from-the-internet/
 reg add "HKCU\Software\Policies\Microsoft\Office\15.0\Word\Security" /v blockcontentexecutionfrominternet /t REG_DWORD /d 1 /f
