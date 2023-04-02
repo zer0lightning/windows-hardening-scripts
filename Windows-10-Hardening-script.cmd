@@ -1,7 +1,14 @@
 ::###############################################################################################################
 ::    Script forked by: https://github.com/zer0lightning | Twitter: @_zer0lightning
 ::    Original authors, credits below. I have also added my own changes in this script.
+::###############################################################################################################
+:: LIABILITY WARNING.
+::
+::    Warning: this code is provided on a best effort basis, no official support is provided. The code in this 
+::    script or repository is provided as-is and the author accepts no liability for damages resulting from its use. 
+::    You use them at your own risk.
 ::    -----------------------------------------------------------------------------------------------------------
+::    Original Author:
 ::    Atlant Security (https://atlantsecurity.com)'s Windows 10 Security Hardening Script - 
 ::    includes Microsoft 365, Office, Chrome, Adobe Reader, Edge security settings. 
 ::    Read the comments and uncomment or comment relevant sections to make best use of it. 
