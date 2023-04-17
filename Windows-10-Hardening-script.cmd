@@ -1034,6 +1034,8 @@ reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SyncDisabled" /t REG_DWORD /
 :: Uncomment BrowserSignin if you need this feature.
 :: https://admx.help/?Category=EdgeChromium&Policy=Microsoft.Policies.Edge::BrowserSignin
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "BrowserSignin" /t REG_DWORD /d "0x00000000" /f
+:: The ImplicitSignInEnabled policy allows system administrators to disable implicit sign-in on Microsoft Edge browsers.
+:: reg add "HKLM\Software\Policies\Microsoft\Edge" /v "ImplicitSignInEnabled" /t REG_DWORD /d "0x00000000" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1" /t REG_SZ /d "odfafepnkmbhccpbejgmiehpchacaeak" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge\ExtensionInstallForcelist\1" /t REG_SZ /d "odfafepnkmbhccpbejgmiehpchacaeak" /f
 reg add "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Edge\Extensions\odfafepnkmbhccpbejgmiehpchacaeak" /v "update_url" /t REG_SZ /d "https://edge.microsoft.com/extensionwebstorebase/v1/crx" /f
