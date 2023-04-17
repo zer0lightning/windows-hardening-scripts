@@ -1101,5 +1101,7 @@ reg add "HKLM\Software\Policies\Google\Chrome" /v "SyncDisabled" /t REG_DWORD /d
 :: Uncomment BrowserSignin if you need this feature
 :: https://admx.help/?Category=Chrome&Policy=Google.Policies.Chrome::BrowserSignin
 reg add "HKLM\Software\Policies\Google\Chrome" /v "BrowserSignin" /t REG_DWORD /d "0x00000000" /f
+:: Disable Chrome password manager to encourage use of proper password manager
+reg add "HKLM\Software\Policies\Google\Chrome" /v "PasswordManagerEnabled" /t REG_DWORD /d "0x00000000" /f
 :: Enforce device driver signing
 BCDEDIT /set nointegritychecks OFF
