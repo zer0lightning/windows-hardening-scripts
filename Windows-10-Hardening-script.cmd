@@ -1026,7 +1026,12 @@ reg add "HKLM\Software\Policies\Microsoft\Edge" /v "PreventSmartScreenPromptOver
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SSLErrorOverrideAllowed" /t REG_DWORD /d "0" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SmartScreenPuaEnabled" /t REG_DWORD /d "0x00000001" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge" /v "AllowDeletingBrowserHistory" /t REG_DWORD /d "0x00000001" /f
-reg add "HKLM\Software\Policies\Google\Chrome" /v "SyncDisabled" /t REG_DWORD /d "0x00000001" /f
+:: Edge STIG - Uncomment Sync if you need this feature
+:: https://www.stigviewer.com/stig/microsoft_edge/2021-02-16/finding/V-235727
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v "SyncDisabled" /t REG_DWORD /d "0x00000001" /f
+:: Uncomment BrowserSignin if you need this feature.
+:: https://admx.help/?Category=EdgeChromium&Policy=Microsoft.Policies.Edge::BrowserSignin
+reg add "HKLM\Software\Policies\Microsoft\Edge" /v "BrowserSignin" /t REG_DWORD /d "0x00000000" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1" /t REG_SZ /d "odfafepnkmbhccpbejgmiehpchacaeak" /f
 reg add "HKLM\Software\Policies\Microsoft\Edge\ExtensionInstallForcelist\1" /t REG_SZ /d "odfafepnkmbhccpbejgmiehpchacaeak" /f
 reg add "HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Edge\Extensions\odfafepnkmbhccpbejgmiehpchacaeak" /v "update_url" /t REG_SZ /d "https://edge.microsoft.com/extensionwebstorebase/v1/crx" /f
@@ -1086,6 +1091,11 @@ reg add "HKLM\Software\Policies\Google\Chrome\ExtensionInstallForcelist" /v "1" 
 reg add "HKLM\Software\Policies\Google\Chrome\URLBlacklist" /v "1" /t REG_SZ /d "javascript://*" /f
 reg add "HKLM\Software\Policies\Google\Update" /v "AutoUpdateCheckPeriodMinutes" /t REG_DWORD /d "1613168640" /f
 reg add "HKLM\Software\Policies\Google\Chrome\Recommended" /v "SafeBrowsingProtectionLevel" /t REG_DWORD /d "2" /f
+:: Chrome STIG - Uncomment Sync if you need this feature
+:: https://www.stigviewer.com/stig/google_chrome_current_windows/2021-07-13/finding/V-221571
 reg add "HKLM\Software\Policies\Google\Chrome" /v "SyncDisabled" /t REG_DWORD /d "0x00000001" /f
+:: Uncomment BrowserSignin if you need this feature
+:: https://admx.help/?Category=Chrome&Policy=Google.Policies.Chrome::BrowserSignin
+reg add "HKLM\Software\Policies\Google\Chrome" /v "BrowserSignin" /t REG_DWORD /d "0x00000000" /f
 :: Enforce device driver signing
 BCDEDIT /set nointegritychecks OFF
