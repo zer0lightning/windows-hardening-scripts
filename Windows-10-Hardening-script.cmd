@@ -1101,7 +1101,7 @@ reg add "HKLM\Software\Policies\Google\Chrome" /v "SyncDisabled" /t REG_DWORD /d
 :: Uncomment BrowserSignin if you need this feature
 :: https://admx.help/?Category=Chrome&Policy=Google.Policies.Chrome::BrowserSignin
 reg add "HKLM\Software\Policies\Google\Chrome" /v "BrowserSignin" /t REG_DWORD /d 0 /f
-:: Disable Chrome Autofill, never suggests or fills address information, or to save additional address information
+:: Disable Chrome Autofill, never suggests or fills credit card information, or to save additional address information
 reg add "HKLM\Software\Policies\Google\Chrome" /v "AutofillCreditCardEnabled" /t REG_DWORD /d 0 /f
 :: Disable Chrome Third Party srevices from being able to read payment details
 reg add "HKLM\Software\Policies\Google\Chrome" /v "PaymentMethodQueryEnabled" /t REG_DWORD /d 0 /f
