@@ -1100,8 +1100,16 @@ reg add "HKLM\Software\Policies\Google\Chrome\Recommended" /v "SafeBrowsingProte
 reg add "HKLM\Software\Policies\Google\Chrome" /v "SyncDisabled" /t REG_DWORD /d "0x00000001" /f
 :: Uncomment BrowserSignin if you need this feature
 :: https://admx.help/?Category=Chrome&Policy=Google.Policies.Chrome::BrowserSignin
-reg add "HKLM\Software\Policies\Google\Chrome" /v "BrowserSignin" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\Software\Policies\Google\Chrome" /v "BrowserSignin" /t REG_DWORD /d 0 /f
+:: Disable Chrome Autofill, never suggests or fills address information, or to save additional address information
+reg add "HKLM\Software\Policies\Google\Chrome" /v "AutofillCreditCardEnabled" /t REG_DWORD /d 0 /f
+:: Disable Chrome Third Party srevices from being able to read payment details
+reg add "HKLM\Software\Policies\Google\Chrome" /v "PaymentMethodQueryEnabled" /t REG_DWORD /d 0 /f
+:: Disable Chrome Autofill, never suggests or fills address information, or to save additional address information
+reg add "HKLM\Software\Policies\Google\Chrome" /v "AutofillAddressEnabled" /t REG_DWORD /d 0 /f
+:: Disable Chrome online spellcheck, instead always use a downloaded dictionary locally.
+reg add "HKLM\Software\Policies\Google\Chrome\Recommended" /v "SpellCheckServiceEnabled" /t REG_DWORD /d 0 /f
 :: Disable Chrome password manager to encourage use of proper password manager
-reg add "HKLM\Software\Policies\Google\Chrome" /v "PasswordManagerEnabled" /t REG_DWORD /d "0x00000000" /f
+reg add "HKLM\Software\Policies\Google\Chrome" /v "PasswordManagerEnabled" /t REG_DWORD /d 0 /f
 :: Enforce device driver signing
 BCDEDIT /set nointegritychecks OFF
